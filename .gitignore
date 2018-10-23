@@ -1,0 +1,6 @@
+__pycache__/
+inputs/
+config/
+notes/
+venv/
+*.egg-info/
