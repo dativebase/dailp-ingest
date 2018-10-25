@@ -30,3 +30,13 @@ def normalize(unistr):
         return unicodedata.normalize('NFD', str(unistr))
     except UnicodeDecodeError:
         return unistr
+
+
+def normalize_nfc(unistr):
+    """Return a unistr using canonical compositional normalization (NFC)."""
+    try:
+        return unicodedata.normalize('NFC', unistr)
+    except TypeError:
+        return unicodedata.normalize('NFC', str(unistr))
+    except UnicodeDecodeError:
+        return unistr
